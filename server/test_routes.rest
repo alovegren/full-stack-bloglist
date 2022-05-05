@@ -1,0 +1,61 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InR1YiB3aXRoIGEgdG9rZW4iLCJpZCI6IjYyNGI0MmU5MmZmMzAxZmY1YTYwN2Q1NSIsImlhdCI6MTY0OTA5OTUxMn0.cZ00b0JxLWIwd9B1ZXES7pUnJbic4FU5GzpHl9tagM4
+
+{
+  "title": "Our token extractor has been moved to middleware",
+  "author": "Missy",
+  "likes": "353",
+  "url": "dummyURL"
+}
+
+###
+DELETE http://localhost:3003/api/blogs/62472d14033734cab528b825
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InR1YiB3aXRoIGEgdG9rZW4iLCJpZCI6IjYyNGI0MmU5MmZmMzAxZmY1YTYwN2Q1NSIsImlhdCI6MTY0OTA5OTUxMn0.cZ00b0JxLWIwd9B1ZXES7pUnJbic4FU5GzpHl9tagM4
+
+###
+PUT http://localhost:3003/api/blogs/62472d14033734cab528b825
+Content-Type: application/json
+
+{
+  "title": "Rhapsodious Kitten Fever"
+}
+
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+  "username": "is this thing even on?",
+  "password": "ddd",
+  "name": "part 7 tester"
+}
+
+###
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+  "username": "nub with a token",
+  "password": "ddd"
+}
+
+###
+PUT http://localhost:3003/api/blogs/624da58ec8fa8d4d8b106e67
+Content-Type: application/json
+
+{
+  "user": "624c654679c04be66194c7f9",
+  "likes": 3,
+  "author": "Kitten Nabber",
+  "title": "rsey",
+  "url": "yreser"
+}
+
+###
+POST http://localhost:3003/api/blogs/624dfb7cb764fefb396621eb/comments
+Content-Type: application/json
+
+{
+  "comment": "this blog was cute"
+}
